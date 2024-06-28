@@ -14,6 +14,9 @@ public class Board {
     }
 
     public void place(int x, int y, char marker) {
+        if (x < 0 || x > 2 || y < 0 || y > 2) {
+            throw new IllegalArgumentException("Coordinates must be between 0 and 2");
+        }
         if (isCellEmpty(x, y)) {
             cells[x][y] = marker;
         }
