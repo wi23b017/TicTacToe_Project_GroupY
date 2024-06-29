@@ -63,8 +63,8 @@ public class TicTacToeTest {
     @Test
     public void testStart_Negative() {
         TicTacToe game = new TicTacToe();
-        game.start();
-        assertFalse(game.getBoard().isFull());
+        game.simulateGame();
+        assertTrue(game.getBoard().isFull());
     }
 }
 
